@@ -1,8 +1,9 @@
+#include "log.h"
 #include <iostream>
-
-void Log(const char* message);
-
 int main()
 {
-    Log("Hello World!");
+    Logger logger;
+
+    logger.log(LogLevel::INFO, "Program Started");
+    return 0;
 }
