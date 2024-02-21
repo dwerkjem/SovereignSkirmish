@@ -13,8 +13,9 @@ if [ "$1" == "-r" ]; then
     ./source/build/SovereignSkirmish
 fi
 
-# if -d flag is passed, run the project with gdb
+# if -d flag is passed, debug the project
+
 if [ "$1" == "-d" ]; then
-    echo "Running the project with gdb"
+    echo "Debugging the project"
     gdb ./source/build/SovereignSkirmish
 fi
