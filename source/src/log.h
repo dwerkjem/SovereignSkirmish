@@ -15,10 +15,12 @@ class Logger {
 public:
     // Log a message with a given log level to the console along with a timestamp
     static void log(LogLevel level, const std::string& message) {
+        // Get the current time
         auto now = std::chrono::system_clock::now();
         std::time_t timestamp = std::chrono::system_clock::to_time_t(now);
         std::cout << "[" << std::put_time(std::localtime(&timestamp), "%Y-%m-%d %H:%M:%S") << "] ";
 
+        // Print the message with the appropriate color based on the log level `[timestamp] [log level] message`
         switch (level) {
             case LogLevel::INFO:
                 std::cout << "\033[1;32m[INFO] " << message << "\033[0m" << std::endl;
