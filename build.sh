@@ -2,7 +2,7 @@
 
 # Build the project
 echo "Building the project"
-cmake -S . -B build
+cmake -S code/ -B code/build
 cmake --build build
 
 # if -r flag is passed, run the project
